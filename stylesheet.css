@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Museo';
+    src:url('fonts/Museo-700.ttf.woff') format('woff'),
+        url('fonts/Museo-700.ttf.svg#Museo-700') format('svg'),
+        url('fonts/Museo-700.ttf.eot'),
+        url('fonts/Museo-700.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+html
+{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top, rgba(118, 189, 218, 0.774), rgb(212, 131, 131)), url("../../images/overlay.png");
+    background-size: cover;
+    overflow: hidden;
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: screen-width;
+
+    font-family: 'Museo';
+    text-align: center;
+}
+
+/* Wrapper things */
