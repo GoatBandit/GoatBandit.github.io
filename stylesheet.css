@@ -1,30 +1,260 @@
 @font-face {
     font-family: 'Museo';
-    src:url('fonts/Museo-700.ttf.woff') format('woff'),
-        url('fonts/Museo-700.ttf.svg#Museo-700') format('svg'),
-        url('fonts/Museo-700.ttf.eot'),
-        url('fonts/Museo-700.ttf.eot?#iefix') format('embedded-opentype'); 
+    src:url('assets/fonts/Museo-700.ttf.woff') format('woff'),
+        url('assets/fonts/Museo-700.ttf.svg#Museo-700') format('svg'),
+        url('assets/fonts/Museo-700.ttf.eot'),
+        url('assets/fonts/Museo-700.ttf.eot?#iefix') format('embedded-opentype'); 
     font-weight: normal;
     font-style: normal;
 }
 
-html
+/* A = href a. Change properties of links */
+a
 {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(to top, rgba(118, 189, 218, 0.774), rgb(212, 131, 131)), url("../../images/overlay.png");
-    background-size: cover;
-    overflow: hidden;
-    background-position: center, center;
-    background-repeat: no-repeat, repeat;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: screen-width;
-
-    font-family: 'Museo';
-    text-align: center;
+    text-decoration: none;
 }
 
-/* Wrapper things */
+    /* Main area */
+    #container
+    {
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        -moz-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+
+        -moz-justify-content: space-between;
+        -webkit-justify-content: space-between;
+        -ms-justify-content: space-between;
+        justify-content: space-between;
+
+        position: relative;
+        padding: 4rem 2rem;
+        height: 100%;
+
+        font-family: 'Museo';
+        text-align: center;
+
+        z-index: -1;
+    }
+
+        /* Header */
+        #header
+        {
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+
+            -moz-flex-direction: column;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+
+            -moz-align-items: center;
+            -webkit-align-items: center;
+            -ms-align-items: center;
+            align-items: center;
+
+            -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+            -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+            -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+            transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+            .contentShell
+            {
+                border-style: solid;
+                border-color: #ffffff;
+                border-top-width: 1px; border-bottom-width: 1px;
+                border-left-width: 0px; border-right-width: 0px;
+                max-width: 100%; max-height: auto;
+                
+                opacity:0;
+                -webkit-animation:fadeIn ease-in 1; 
+                -moz-animation:fadeIn ease-in 1;
+                animation:fadeIn ease-in 1;
+
+                -webkit-animation-fill-mode:forwards;
+                -moz-animation-fill-mode:forwards;
+                animation-fill-mode:forwards;
+
+                -webkit-animation-duration:2s;
+                -moz-animation-duration:2s;
+                animation-duration:2s;
+            }
+
+                .content
+                {
+                    -webkit-animation:textBox ease-in 1;
+                    -moz-animation:textBox ease-in 1;
+                    animation:textBox ease-in 1;
+                
+                    -webkit-animation-duration:3s;
+                    -moz-animation-duration:3s;
+                    animation-duration:3s;
+
+                    -moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+                    -webkit-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+                    -ms-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+                    transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
+                    
+                    -moz-transition-delay: 1.5s;
+                    -webkit-transition-delay: 1.5s;
+                    -ms-transition-delay: 1.5s;
+                    transition-delay: 1.5s;
+
+                    background-image: -moz-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+                    background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+                    background-image: -ms-radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+                    background-image: radial-gradient(rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0) 55%);
+                    
+                    padding: 5rem 4rem;
+                    max-height: 400px;
+                    overflow: hidden;
+                }
+
+                    .content > :first-child
+                    {
+                        margin-top: 0;
+                    }
+
+                    .content > :last-child
+                    {
+                        margin-bottom: 0;
+                    }
+
+                .content h1
+                {
+                    letter-spacing: 0.1rem;
+                    font-size: 2.2rem;
+                    line-height: 1;
+                }
+
+                .content p
+                {
+                    text-transform: uppercase;
+                    letter-spacing: 0.1rem;
+                    font-size: 1.2rem;
+                    line-height: 1;
+                }
+
+            /* Footer */
+            #footer
+            {
+                position: fixed;
+                top: 90%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); 
+            }
+
+    /* Background */
+    #bg
+    {
+        min-height: 100%; min-width: 1024px;
+        width: 100%; height: auto;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background: linear-gradient(to top, rgba(118, 189, 218, 0.774), rgba(212, 131, 131, 0.603));
+        position: fixed; top: 0; left: 0;
+
+        z-index: -2;
+    }
+
+    #black
+    {
+        min-height: 100%; min-width: 1024px;
+        width: 100%; height: auto;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        background-color: #000000;
+        position: fixed; top: 0; left: 0;
+
+        z-index: -3;
+    }
+
+/* Animations/Effects. Used by setting the HTML class="EFFECT NAME" */
+
+/* Fade in effect */
+.fadeIn
+{
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.75s;
+    -moz-animation-duration:0.75s;
+    animation-duration:0.75s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.slowFadeIn
+{
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:1.5s;
+    -moz-animation-duration:1.5s;
+    animation-duration:1.5s;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+/* Open squish effect */
+.openSquish
+{
+    -webkit-animation:openSquish ease-in 1;
+    -moz-animation:openSquish ease-in 1;
+    animation:openSquish ease-in 1;
+
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+}
+
+@-webkit-keyframes openSquish { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@-moz-keyframes openSquish { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes openSquish { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+
+@-webkit-keyframes textBox { from { max-height: 0px; } to { max-height: 400px; } }
+@-moz-keyframes textBox { from { max-height: 0px; } to { max-height: 400px; } }
+@keyframes textBox { from { max-height: 0px; } to { max-height: 400px; } }
