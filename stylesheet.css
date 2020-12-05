@@ -52,28 +52,25 @@ a
         {
             display: -moz-flex;
             display: -webkit-flex;
-            display: -ms-flex;
             display: flex;
 
             -moz-flex-direction: column;
             -webkit-flex-direction: column;
-            -ms-flex-direction: column;
             flex-direction: column;
 
             -moz-align-items: center;
             -webkit-align-items: center;
-            -ms-align-items: center;
             align-items: center;
 
             -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
             -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-            -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
             transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 
             position: fixed;
             top: 50%;
             left: 50%;
             -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
         }
         
@@ -86,26 +83,24 @@ a
                 max-width: 100%; max-height: auto;
                 
                 opacity:0;
-                -webkit-animation:fadeIn ease-in 1; 
-                -moz-animation:fadeIn ease-in 1;
-                animation:fadeIn ease-in 1;
+                -webkit-animation: fadeIn ease-in 1; 
+                -moz-animation: fadeIn ease-in 1;
+                animation: fadeIn ease-in 1;
 
-                -webkit-animation-fill-mode:forwards;
-                -moz-animation-fill-mode:forwards;
-                animation-fill-mode:forwards;
+                -webkit-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
 
-                -webkit-animation-duration:2s;
-                -moz-animation-duration:2s;
-                animation-duration:2s;
+                -webkit-animation-duration: 2s;
+                -moz-animation-duration: 2s;
+                animation-duration: 2s;
 
                 -moz-transition: max-width 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
                 -webkit-transition: max-width 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
-                -ms-transition: max-width 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
                 transition: max-width 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
                 
                 -moz-transition-delay: 1.5s;
                 -webkit-transition-delay: 1.5s;
-                -ms-transition-delay: 1.5s;
                 transition-delay: 1.5s;
             }
 
@@ -115,9 +110,9 @@ a
                     -moz-animation:textBox ease-in 1;
                     animation:textBox ease-in 1;
                 
-                    -webkit-animation-duration:3s;
-                    -moz-animation-duration:3s;
-                    animation-duration:3s;
+                    -webkit-animation-duration: 3s;
+                    -moz-animation-duration: 3s;
+                    animation-duration: 3s;
 
                     -moz-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
                     -webkit-transition: max-height 0.75s ease, padding 0.75s ease, opacity 0.325s ease-in-out;
@@ -165,135 +160,263 @@ a
                         line-height: 1;
                         color: #ffffff;
                     }
-
+            
             .buttons
             {
-                -webkit-animation:fadeIn ease-in 1; 
-                -moz-animation:fadeIn ease-in 1;
-                animation:fadeIn ease-in 1;
+                display: -moz-flex;
+                display: -webkit-flex;
+                display: -ms-flex;
+                display: flex;
+                
+                margin-bottom: 0;
+                list-style: none;
+                padding-left: 0;
+                border: solid 1px #ffffff;
+                border-radius: 4px;
+                position: relative;
+                margin-top: 10px;
 
-                -webkit-animation-fill-mode:forwards;
-                -moz-animation-fill-mode:forwards;
-                animation-fill-mode:forwards;
+                -webkit-animation: fadeIn ease-in 1; 
+                -moz-animation: fadeIn ease-in 1;
+                animation: fadeIn ease-in 1;
 
-                -webkit-animation-duration:2s;
-                -moz-animation-duration:2s;
-                animation-duration:2s;
+                -webkit-animation-fill-mode: forwards;
+                -moz-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+
+                -webkit-animation-duration: 2s;
+                -moz-animation-duration: 2s;
+                animation-duration: 2s;
             }
-            
-                .buttons
+
+                .buttons li
                 {
-                    display: -moz-flex;
-                    display: -webkit-flex;
-                    display: -ms-flex;
-                    display: flex;
-                    
-                    margin-bottom: 0;
-                    list-style: none;
                     padding-left: 0;
-                    border: solid 1px #ffffff;
-                    border-radius: 4px;
-                    position: relative;
+                    border-left: solid 1px #ffffff;
+                    text-transform: uppercase;
                 }
 
-                    .buttons li
+                    .buttons li a
                     {
-                        padding-left: 0;
-                        border-left: solid 1px #ffffff;
+                        display: block;
+                        min-width: 7.5rem;
+                        height: 2.75rem;
+                        line-height: 2.75rem;
+                        padding: 0.5rem 1rem;
                         text-transform: uppercase;
+                        letter-spacing: 0.1rem;
+                        font-size: 1.0rem;
+                        color: #ffffff;
+                        border-bottom: 0;
+
+                        -webkit-transition: all linear 0.15s;
+                        -moz-transition: all linear 0.15s;
+                        transition: all linear 0.15s;
                     }
 
-                        .buttons li a
+                        .buttons li a:hover 
                         {
-                            display: block;
-                            min-width: 7.5rem;
-                            height: 2.75rem;
-                            line-height: 2.75rem;
-                            padding: 0.5rem 1rem;
-                            text-transform: uppercase;
-                            letter-spacing: 0.1rem;
-                            font-size: 1.0rem;
-                            color: #ffffff;
-                            border-bottom: 0;
+                            background-color: rgba(255, 255, 255, 0.075);
                         }
 
-                            .buttons li a:hover 
-                            {
-                                background-color: rgba(255, 255, 255, 0.075);
-                            }
-
-                            .buttons li a:active 
-                            {
-                                background-color: rgba(255, 255, 255, 0.175);
-                            }
+                        .buttons li a:active 
+                        {
+                            background-color: rgba(255, 255, 255, 0.175);
+                        }
 
             /* Main */
             .mainText
             {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: fixed;
-                width: 100vw; height: 100vh;
-                bottom: 0; right: 0;
-                z-index: 1;
-                visibility: hidden;
-                opacity: 0;
-                overflow: hidden;
-                transition: 0.75s ease-in-out;
+                font-weight: bold;
+                font-size: 25px;
+                line-height: 30px;
+                text-align: center;
             }
 
-                .mainText #about
+                .mainTextHelper
                 {
-                    position: relative;
-                    bottom: -100vw; right: -100vh;
-                    display: flex;
+                    display: inline-block;
+                    width: 75%; height: 75%;
+                    vertical-align: middle;
                     align-items: center;
-                    max-width: 800px; max-height: 600px;
-                    width: 60%; height: 80%;
-                    background-color: #424242;
-                    transform: rotate(32deg);
-                    transition: 00.75s ease-in-out;
                 }
 
-                    .mainText #about #inner
+                    .about
                     {
-                        display: flex;
-                        justify-content: center;
-                        align-content: flex-end;
-                        width: 60%; height: 100%;
-                        overflow: hidden;
-                        flex-direction: column;
-                        padding: 4rem;
+                        display: none;
+                        position: fixed;
+                        width: 100%; height: 100%;
+                        top: 0px; left: 0px;
+                        content: '';
+
+                        background: #CE5937;
+                        background: -webkit-linear-gradient(top, #CE5937 0%, #1C6EA4 50%, #C59237 100%);
+                        background: -moz-linear-gradient(top, #CE5937 0%, #1C6EA4 50%, #C59237 100%);
+                        background: linear-gradient(to bottom, #CE5937 0%, #1C6EA4 50%, #C59237 100%);
                     }
 
-                        .mainText #about #inner #close
+                        .aboutEffect
                         {
+                            background:#ffffff;
                             position: absolute;
-                            right: -1rem; top: -1rem;
-                            width: 3rem; height: 3rem;
-                            font-size: 1rem;
-                            border-radius: 100%;
-                            color: #ffffff;
-                            z-index: 2;
-                            line-height: 3rem;
-                            text-align: center;
-                            cursor: pointer;
-                            text-decoration: none;
+                            top: 50%; left: 50%;
+                            padding: 70px;
+                            border-radius: 3px;
+
+                            -webkit-box-shadow: 0px 0px 0px 1px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 8px 4px rgba(0,0,0,0); 
+                            box-shadow: 0px 0px 0px 1px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 8px 4px rgba(0,0,0,0);
+
+                            -webkit-transform: translate(-50%, -50%) scale(0.5);
+                            -moz-transform: translate(-50%, -50%) scale(0.5);
+                            transform: translate(-50%, -50%) scale(0.5);
                         }
 
-                    .mainText #about:target
-                    {
-                        bottom: 0; right: 0;
-                        transform: rotate(0);
-                    }
-                
-                .mainText:target
-                {
-                    visibility: visible;
-                    opacity: 1;
-                }
+                            .aboutEffect a
+                            {
+                                background: #d75f70;
+                                border: 3px solid #999999;
+                                border-radius: 1000px;
+                                cursor: pointer;
+                                display: inline-block;
+                                width: 35px; height: 35px;
+                                top: 10px; right: 10px;
+                                position: absolute;
 
+                                font-weight: bold;
+                                font-size: 25px;
+                                line-height: 32px;
+                                text-align: center;
+
+                                -webkit-transition:all ease 0.5s;
+                                -moz-transition: all ease 0.5s;
+                                transition:all ease 0.5s;
+                            }
+
+                                .aboutEffect a:hover
+                                {
+                                    background-color: #cccccc;
+
+                                    -webkit-transform: rotate(180deg);
+                                    -moz-transform: rotate(180deg);
+                                    transform: rotate(180deg);
+                                }
+
+                    .skills
+                    {
+                        display: none;
+                        position: fixed;
+                        width: 100%; height: 100%;
+                        top: 0px; left: 0px;
+                        content: '';
+
+                        background: #CECECE;
+                        background: -webkit-radial-gradient(center, #CECECE 0%, #000000 100%);
+                        background: -moz-radial-gradient(center, #CECECE 0%, #000000 100%);
+                        background: radial-gradient(ellipse at center, #CECECE 0%, #000000 100%);
+                    }
+
+                        .skillsEffect
+                        {
+                            background:#ffffff;
+                            position: absolute;
+                            top: 50%; left: 50%;
+                            padding: 70px;
+                            border-radius: 3px;
+
+                            box-shadow:0px 2px 16px rgba(0,0,0,0.5);
+
+                            -webkit-transform: translate(-50%, -50%) scale(0.5);
+                            -moz-transform: translate(-50%, -50%) scale(0.5);
+                            transform: translate(-50%, -50%) scale(0.5);
+                        }
+
+                            .skillsEffect a
+                            {
+                                background: #d75f70;
+                                border: 3px solid #999999;
+                                border-radius: 1000px;
+                                cursor: pointer;
+                                display: inline-block;
+                                width: 35px; height: 35px;
+                                top: 10px; right: 10px;
+                                position: absolute;
+
+                                font-weight: bold;
+                                font-size: 25px;
+                                line-height: 32px;
+                                text-align: center;
+
+                                -webkit-transition:all ease 0.5s;
+                                -moz-transition: all ease 0.5s;
+                                transition:all ease 0.5s;
+                            }
+
+                                .skillsEffect a:hover
+                                {
+                                    background-color: #cccccc;
+
+                                    -webkit-transform: rotate(180deg);
+                                    -moz-transform: rotate(180deg);
+                                    transform: rotate(180deg);
+                                }
+
+                    .work
+                    {
+                        background: rgba(0,0,0,0.75);
+                        display: none;
+                        position: fixed;
+                        width: 100%; height: 100%;
+                        top: 0px; left: 0px;
+                        content: '';
+                    }
+
+                        .workEffect
+                        {
+                            background:#ffffff;
+                            position: absolute;
+                            top: 50%; left: 50%;
+                            padding: 70px;
+                            border-radius: 3px;
+
+                            -webkit-box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF,
+                             -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+                            box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF,
+                             -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
+
+                            -webkit-transform: translate(-50%, -50%) scale(0.5);
+                            -moz-transform: translate(-50%, -50%) scale(0.5);
+                            transform: translate(-50%, -50%) scale(0.5);
+                        }
+
+                            .workEffect a
+                            {
+                                background: #d75f70;
+                                border: 3px solid #999999;
+                                border-radius: 1000px;
+                                cursor: pointer;
+                                display: inline-block;
+                                width: 35px; height: 35px;
+                                top: 10px; right: 10px;
+                                position: absolute;
+
+                                font-weight: bold;
+                                font-size: 25px;
+                                line-height: 32px;
+                                text-align: center;
+
+                                -webkit-transition:all ease 0.5s;
+                                -moz-transition: all ease 0.5s;
+                                transition:all ease 0.5s;
+                            }
+
+                                .workEffect a:hover
+                                {
+                                    background-color: #cccccc;
+
+                                    -webkit-transform: rotate(180deg);
+                                    -moz-transform: rotate(180deg);
+                                    transform: rotate(180deg);
+                                }
 
             /* Footer */
             #footer
@@ -350,18 +473,18 @@ a
 /* Fade in effect */
 .fadeIn
 {
-    opacity:0;
-    -webkit-animation:fadeIn ease-in 1;
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
 
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 
-    -webkit-animation-duration:0.75s;
-    -moz-animation-duration:0.75s;
-    animation-duration:0.75s;
+    -webkit-animation-duration: 0.75s;
+    -moz-animation-duration: 0.75s;
+    animation-duration: 0.75s;
 }
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -371,40 +494,43 @@ a
 .slowFadeIn
 {
     opacity:0;
-    -webkit-animation:fadeIn ease-in 1;
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
 
-    -webkit-animation-fill-mode:forwards;
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 
-    -webkit-animation-duration:1.5s;
-    -moz-animation-duration:1.5s;
-    animation-duration:1.5s;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
-/* Open squish effect */
-.openSquish
-{
-    -webkit-animation:openSquish ease-in 1;
-    -moz-animation:openSquish ease-in 1;
-    animation:openSquish ease-in 1;
-
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
-}
-
-@-webkit-keyframes openSquish { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-@-moz-keyframes openSquish { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-@keyframes openSquish { from { transform: scaleY(0); } to { transform: scaleY(1); } }
-
 @-webkit-keyframes textBox { from { max-height: 0px; max-width: 500px; } to { max-height: 400px; max-width: 500; } }
 @-moz-keyframes textBox { from { max-height: 0px; max-width: 500px; } to { max-height: 400px; max-width: 500; } }
 @keyframes textBox { from { max-height: 0px; max-width: 500px; } to { max-height: 400px; max-width: 500; } }
 
+/* Home page button effects */
+.transform-in, .transform-out 
+{
+    top: 50%; left: 50%;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.transform-in 
+{
+	-webkit-transform: translate(-50%, -50%) scale(1);
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.transform-out 
+{
+	-webkit-transform: translate(-50%, -50%) scale(0.5);
+	transform: translate(-50%, -50%) scale(0.5);
+}
