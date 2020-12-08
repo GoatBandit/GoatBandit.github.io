@@ -38,12 +38,15 @@ p
 
 a
 {
-    color: inherit;
+    color: rgb(56, 67, 92);
+    font-weight: bold;
 }
 
 h1
 {
     font-size: 2em;
+
+    padding-left: 10px;
 }
 
 h2
@@ -154,9 +157,9 @@ h3
 
             section
             {
-                padding: 20px 0 0;
+                padding: 20px 0px 0;
 
-                border-top: 1px solid #dedede;
+                border-top: 1px solid #ffffff;
             }
 
                 section:first-child
@@ -172,6 +175,9 @@ h3
                 section:hover
                 {
                     background: rgb(214, 214, 214);
+
+                    -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+                    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
                 }
 
                 .sectionTitle
@@ -245,10 +251,11 @@ h3
                         font-size: 1em;
                     }
 
-                            .languageSkills ul li
-                            {
-                                margin-bottom: 3px;
-                            }
+                        .languageSkills p
+                        {
+                            column-width: auto;
+                            margin: auto;
+                        }
 
                     .projectList
                     {

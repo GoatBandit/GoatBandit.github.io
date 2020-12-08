@@ -16,6 +16,9 @@ a
 .is-preload
 {
     height: 0;
+
+    overflow-y: scroll;
+    overflow-x: scroll;
 }
 
     /* Main area */
@@ -321,9 +324,9 @@ a
                         content: '';
 
                         background: #CE3C3C;
-                        background: -webkit-linear-gradient(top, #CE3C3C 0%, #5C5C5C 50%, #1C6EA4 100%);
-                        background: -moz-linear-gradient(top, #CE3C3C 0%, #5C5C5C 50%, #1C6EA4 100%);
-                        background: linear-gradient(to bottom, #CE3C3C 0%, #5C5C5C 50%, #1C6EA4 100%);
+                        background: -webkit-linear-gradient(top, rgba(206, 60, 60, 0.5) 0%, rgba(92, 92, 92, 0.5) 50%, rgba(28, 110, 164, 0.5) 100%);
+                        background: -moz-linear-gradient(top, rgba(206, 60, 60, 0.5) 0%, rgba(92, 92, 92, 0.5) 50%, rgba(28, 110, 164, 0.5) 100%);
+                        background: linear-gradient(to bottom, rgba(206, 60, 60, 0.5) 0%, rgba(92, 92, 92, 0.5) 50%, rgba(28, 110, 164, 0.5) 100%);
                     }
 
                         .aboutEffect
@@ -331,10 +334,10 @@ a
                             background:#ffffff;
                             position: absolute;
                             top: 50%; left: 50%;
-                            padding: 70px;
+                            padding: 1%;
                             border-radius: 3px;
 
-                            font-size: 16px;
+                            font-size: 75%;
 
                             -webkit-box-shadow: 0px 0px 0px 1px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 8px 4px rgba(0,0,0,0); 
                             box-shadow: 0px 0px 0px 1px #A0A0A0, inset 0px 10px 27px -8px #141414, inset 0px -10px 27px -8px #A31925, 5px 5px 8px 4px rgba(0,0,0,0);
@@ -344,7 +347,7 @@ a
                             transform: translate(-50%, -50%) scale(0.5);
                         }
 
-                            .aboutEffect a
+                            .aboutEffect .close
                             {
                                 background: #d75f70;
                                 border: 3px solid #999999;
@@ -365,7 +368,7 @@ a
                                 transition:all ease 0.5s;
                             }
 
-                                .aboutEffect a:hover
+                                .aboutEffect .close:hover
                                 {
                                     background-color: #cccccc;
 
@@ -528,7 +531,7 @@ a
                             transform: translate(-50%, -50%) scale(0.5);
                         }
 
-                            .workEffect a
+                            .workEffect .close
                             {
                                 background: #d75f70;
                                 border: 3px solid #999999;
@@ -549,7 +552,7 @@ a
                                 transition:all ease 0.5s;
                             }
 
-                                .workEffect a:hover
+                                .workEffect .close:hover
                                 {
                                     background-color: #cccccc;
 
@@ -570,7 +573,7 @@ a
                 .copyright
                 {
                     position: fixed;
-                    top: 90%;
+                    top: 95%;
                     left: 50%;
                     -webkit-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%); 
@@ -691,7 +694,7 @@ a
 
     #black
     {
-        min-height: 100%; min-width: 1024px;
+        min-height: 100%; min-width: 100%;
         width: 100%; height: auto;
 
         -webkit-background-size: cover;
