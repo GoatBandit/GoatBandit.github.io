@@ -82,12 +82,13 @@ body
                 .profilePicture
                 {
                     margin: auto;
-                    width: 100%; height: 280px;
+                    width: 100%; height: width;
                 }
 
                     .profilePicture img
                     {
-                        width: 100%; height: 100%;
+                        margin-top: 25px;
+                        width: 100%; height: width;
                     }
 
                 .myself
