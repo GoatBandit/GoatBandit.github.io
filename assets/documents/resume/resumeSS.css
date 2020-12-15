@@ -28,12 +28,17 @@ ul
 
 h1
 {
+    margin-top: 15px;
+    margin-left: 15px;
+
     font-size: 20px;
     font-weight: 700;
 }
 
 h2
 {
+    margin-left: 15px;
+
     font-size: 16px;
     font-weight: 500;
 }
@@ -51,79 +56,133 @@ body
     line-height: 20px;
 
     background: #1a237e;
-    color: #ffffff;
+    color: #48d19d;
 }
 
-    .container
+i
+{
+    color: #ffffff;
+
+    font-size: 20px;
+}
+
+img 
+{ 
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.container
+{
+    width: 100%;
+}
+    
+    .leftColumn
     {
-        display: flex;
-        width: 800px; height: auto;
-        margin: 50px auto;
+        float: left;
+        width: 30%; height: auto;
+        max-width: 300px;
+        box-sizing: border-box;
+
+        background-color: #48d19d;
     }
 
-        .information
+        .profile
         {
-            width: 280px;
-            padding: 0 25px;
-
-            background: #52f5b6;
+            position: relative;
+            border-style: solid;
+            border-width: 0px 0px 3px 0px;
+            box-sizing: border-box;
+            height: 25%;
+            margin: 0px;
         }
 
-            .information:last-child
+            .profile img
             {
-                border-bottom: 0;
+                width: 100%; height: width;
             }
-
-            .profile
-            {
-                width: 100%;
-            }
-
-                .profilePicture
-                {
-                    margin: auto;
-                    width: 100%; height: width;
-                }
-
-                    .profilePicture img
-                    {
-                        margin-top: 25px;
-                        width: 100%; height: width;
-                    }
-
-                .myself
-                {
-                    margin-top: 5px;
-                    margin-bottom: 20px;
-                }
-
-            .about
+    
+            .myself
             {
                 margin-top: 5px;
                 margin-bottom: 20px;
+
+                color: #ffffff;
             }
 
-            .contact
-            {
-
-            }
-
-                .contactInfo
-                {
-                    margin-top: 5px;
-                    margin-bottom: 20px;
-                }
-
-                .socialMedia
-                {
-                    margin-top: 5px;
-                    margin-bottom: 20px;
-                }
-
-        .mainArea
+        .leftSec2Div
         {
-            width: 520px;
-            padding: 25px;
+            border-style: solid;
+            border-width: 0px 0px 0px 0px;
+            box-sizing: border-box;
+            margin: 15px;
 
-            background: #000000;
+            color: white;
         }
+
+        .largeTab 
+        {
+            float: left;
+            box-sizing: border-box;
+            width: 70%; height: 300px;
+
+            background-color: white;
+        }
+    
+            .tabBox
+            {
+                float: left;
+                border: solid;
+                border-width: 0px 0px 3px 0px;
+                box-sizing: border-box;
+                margin: 10px;
+                padding: 10px;
+                width: 200px; height: auto;
+            }
+    
+                .tabBox:hover 
+                {
+                    color: #ffffff;
+                    background-color: #48d19d;
+                }
+    
+                .box-title
+                {
+                    font-weight: bold;
+                    line-height: 1.5;
+                    box-sizing: border-box;
+                }
+        
+                .box-date
+                {
+                    line-height: 1.5;
+                    box-sizing: border-box;
+                }
+        
+                .box-description
+                {
+                    line-height: 1.5;
+                    box-sizing: border-box;
+                }
+
+        .rightColumn
+        {
+            display: grid;
+            grid-template-rows: repeat(3, 200px);
+        }
+
+            .rightColumn .divSection:nth-child(2)
+            {
+                grid-row: 3;
+                background-color: #1a237e;
+            }
+
+            .smallTab 
+            {
+                float: left;
+                box-sizing: border-box;
+                width: 35%; height: 300px;
+
+                background-color: rgb(255, 255, 255);
+            }
