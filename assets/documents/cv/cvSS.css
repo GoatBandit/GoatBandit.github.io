@@ -90,7 +90,7 @@ h4
 
             .profilePic
             {
-                width: 12.5%;
+                width: 6%;
                 float: left;
                 margin-right: 30px;
             }
@@ -203,7 +203,7 @@ h4
 
                     .sectionTitle h1
                     {
-                        color: #cf8a05;
+                        color: #8A72BE;
                         text-transform: uppercase;
                         letter-spacing: 1px;
 
@@ -259,9 +259,9 @@ h4
                         padding-left: 0%;
 
                         list-style-type: none;
-                        -moz-column-count: 3;
-                        -webkit-column-count: 3;
-                        column-count: 3;
+                        -moz-column-count: 4;
+                        -webkit-column-count: 4;
+                        column-count: 4;
                         
                         font-size: 1em;
                     }
