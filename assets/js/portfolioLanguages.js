@@ -6,16 +6,16 @@ const lineDown = lineDownSvg.firstElementChild;
 const left = document.querySelector('#rectleft');
 const right = document.querySelector('#rectright');
 const details = document.querySelector('#details');
-const langHint = document.querySelector('#langhint');
+const mapping = document.querySelector('#mapping');
 const modal = document.querySelector('#modal');
 
 if (!window.localStorage.hideClickToLang) 
 {
-	langHint.langTimeout = setTimeout(() => 
+	mapping.langTimeout = setTimeout(() => 
 	{
-		langHint.innerText = '(click to view details)';
-		langHint.style.left = '50%';
-		langHint.style.opacity = '0.5';
+		mapping.innerText = '(click to view details)';
+		mapping.style.left = '50%';
+		mapping.style.opacity = '0.5';
 	}, 5000);
 }
 
@@ -25,10 +25,10 @@ for (let button of lang_buttons)
 	{
 		if (going) return;
 		going = true;
-		clearTimeout(langHint.langTimeout);
-		langHint.style.opacity = '0';
+		clearTimeout(mapping.langTimeout);
+		mapping.style.opacity = '0';
 		window.localStorage.hideClickToLang = true;
-		clearTimeout(langHint.exitTimeout);
+		clearTimeout(mapping.exitTimeout);
 
 		if (button.className.includes('active')) 
 		{
@@ -45,8 +45,8 @@ for (let button of lang_buttons)
 				right.style.stroke = 'transparent';
 				going = false;
 			}, 500);
-			langHint.style.opacity = '0';
-			clearTimeout(langHint.exitTimeout);
+			mapping.style.opacity = '0';
+			clearTimeout(mapping.exitTimeout);
 			window.localStorage.hideClickToExit = true;
 			return;
 		}
@@ -64,7 +64,7 @@ for (let button of lang_buttons)
 		lineDown.style.strokeDashoffset = '-100px';
 
 		// Place exit thingy
-		langHint.style.left = x + 'px';
+		mapping.style.left = x + 'px';
 
 
 		// Do rectangle path
@@ -97,10 +97,10 @@ for (let button of lang_buttons)
 		// exit thingy timeout
 		if (!window.localStorage.hideClickToExit) 
 		{
-			langHint.exitTimeout = setTimeout(() => 
+			mapping.exitTimeout = setTimeout(() => 
 			{
-				langHint.innerText = '(click again to exit)';
-				langHint.style.opacity = '0.5';
+				mapping.innerText = '(click again to exit)';
+				mapping.style.opacity = '0.5';
 			}, 2500);
 		}
 

@@ -190,7 +190,7 @@ canvas
         z-index: -100;
     }
 
-    #langhint 
+    #mapping 
     {
         opacity: 0;
         position: absolute;
